@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Canvas</title>
+
+    <style>
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: bisque;
+            min-height: 100vh;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-evenly;
+            align-content: flex-start;
+            flex-flow: row wrap;
+        }
+        
+        input,
+        button {
+            padding: .2rem;
+        }
+
+        .inputs {
+            margin: 2rem 0;
+            flex: 1 0 100%;
+        }
+
+        .canvas {
+            background-color: #fff;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container flex">
+        <h1>PIXEL DRAW</h1>
+        <div class="flex inputs">
+            <label>Grid (n * n) :
+                <input type="number" class="grid" value="25" min="10" max="50">
+            </label>
+            <label>Color :
+                <input type="color" class="color" value="#00ff00">
+            </label>
+            <button class="submit">Submit</button>
+            <button class="download">Generate PNG</button>
+        </div>
+        <canvas class="canvas"></canvas>
+    </div>
+</body>
+
+<script src="./main.js"></script>
+</html>
